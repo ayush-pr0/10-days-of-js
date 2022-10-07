@@ -1,31 +1,6 @@
-//Write Your Code Here
-// In this challenge, we learn about if-else statements. Check out the attached tutorial for more details.
-'use strict';
-
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
-
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', inputStdin => {
-    inputString += inputStdin;
-});
-
-process.stdin.on('end', _ => {
-    inputString = inputString.trim().split('\n').map(string => {
-        return string.trim();
-    });
-    
-    main();    
-});
-
-function readLine() {
-    return inputString[currentLine++];
-}
 
 function getGrade(score) {
-    // Write your code here
+    
     if(score > 25 && score <= 30){
         return("A");
     }else if(score > 20 && score <= 25){
@@ -44,8 +19,3 @@ function getGrade(score) {
 }
 
 
-function main() {
-    const score = +(readLine());
-    
-    console.log(getGrade(score));
-}
