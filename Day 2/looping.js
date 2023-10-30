@@ -1,17 +1,17 @@
-
-
 function vowelsAndConsonants(s) {
-    var vowels = ["a", "e", "i", "o", "u"];
-    for (var i = 0; i < s.length; i++){
-        if (vowels.indexOf(s[i]) > -1){
+    var vowels = "aeiou";
+    var consonants = "";
+    
+    for (var i = 0; i < s.length; i++) {
+        if (vowels.includes(s[i])) {
             console.log(s[i]);
+        } else {
+            consonants += s[i];
         }
-    }    
-    for (var j = 0; j < s.length; j++){
-        if (vowels.indexOf(s[j]) < 0){
-            console.log(s[j]);
-        }
-    }    
+    }
+    
+    // Print consonants after all vowels
+    for (var j = 0; j < consonants.length; j++) {
+        console.log(consonants[j]);
+    }
 }
-
-
